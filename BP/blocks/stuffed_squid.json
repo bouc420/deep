@@ -1,0 +1,162 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:block": {
+    "description": {
+      "identifier": "minersdelight:stuffed_squid",
+      "menu_category": { "category": "none" },
+      "states": {
+        "farmersdelight:food_block_stage": [0, 1, 2, 3, 4, 5]
+      },
+      "traits": {
+        "minecraft:placement_direction": {
+          "enabled_states": ["minecraft:cardinal_direction"],
+          "y_rotation_offset": 0.0
+        }
+      }
+    },
+    "permutations": [
+      {
+        "condition": "query.block_state('farmersdelight:food_block_stage') == 0",
+        "components": {
+          "minecraft:geometry": "geometry.stuffed_squid_stage0",
+          "minecraft:collision_box": {
+            "origin": [-7.0, 0.0, -7.0],
+            "size": [14.0, 17.0, 14.0]
+          },
+          "minecraft:selection_box": {
+            "origin": [-7.0, 0.0, -7.0],
+            "size": [14.0, 17.0, 14.0]
+          },
+          "tag:farmersdelight:use_bowl": {}
+        }
+      },
+      {
+        "condition": "query.block_state('farmersdelight:food_block_stage') == 1",
+        "components": {
+          "minecraft:geometry": "geometry.stuffed_squid_stage1",
+          "minecraft:collision_box": {
+            "origin": [-7.0, 0.0, -7.0],
+            "size": [14.0, 11.0, 14.0]
+          },
+          "minecraft:selection_box": {
+            "origin": [-7.0, 0.0, -7.0],
+            "size": [14.0, 11.0, 14.0]
+          },
+          "minecraft:loot": "loot_tables/minersdelight/food_block/stuffed_squid_over.json"
+        }
+      },
+      {
+        "condition": "query.block_state('farmersdelight:food_block_stage') == 2",
+        "components": {
+          "minecraft:geometry": "geometry.stuffed_squid_stage2",
+          "minecraft:collision_box": {
+            "origin": [-7.0, 0.0, -7.0],
+            "size": [14.0, 9.5, 14.0]
+          },
+          "minecraft:selection_box": {
+            "origin": [-7.0, 0.0, -7.0],
+            "size": [14.0, 9.5, 14.0]
+          },
+          "minecraft:loot": "loot_tables/minersdelight/food_block/stuffed_squid_over.json"
+        }
+      },
+      {
+        "condition": "query.block_state('farmersdelight:food_block_stage') == 3",
+        "components": {
+          "minecraft:geometry": "geometry.stuffed_squid_stage3",
+          "minecraft:collision_box": {
+            "origin": [-7.0, 0.0, -7.0],
+            "size": [14.0, 9.3, 14.0]
+          },
+          "minecraft:selection_box": {
+            "origin": [-7.0, 0.0, -7.0],
+            "size": [14.0, 9.3, 14.0]
+          },
+          "minecraft:loot": "loot_tables/minersdelight/food_block/stuffed_squid_over.json"
+        }
+      },
+      {
+        "condition": "query.block_state('farmersdelight:food_block_stage') == 4",
+        "components": {
+          "minecraft:geometry": "geometry.stuffed_squid_stage4",
+          "minecraft:collision_box": {
+            "origin": [-7.0, 0.0, -7.0],
+            "size": [14.0, 7.0, 14.0]
+          },
+          "minecraft:selection_box": {
+            "origin": [-7.0, 0.0, -7.0],
+            "size": [14.0, 7.0, 14.0]
+          },
+          "minecraft:loot": "loot_tables/minersdelight/food_block/stuffed_squid_over.json"
+        }
+      },
+      {
+        "condition": "query.block_state('farmersdelight:food_block_stage') == 5",
+        "components": {
+          "minecraft:geometry": "geometry.stuffed_squid_leftover",
+          "minecraft:collision_box": {
+            "origin": [-7.0, 0.0, -7.0],
+            "size": [14.0, 2.0, 14.0]
+          },
+          "minecraft:selection_box": {
+            "origin": [-7.0, 0.0, -7.0],
+            "size": [14.0, 2.0, 14.0]
+          },
+          "minecraft:loot": "loot_tables/minersdelight/food_block/stuffed_squid_over.json"
+        }
+      },
+      {
+        "condition": "query.block_state('minecraft:cardinal_direction') == 'north'",
+        "components": { "minecraft:transformation": { "rotation": [0, 180, 0] } }
+      },
+      {
+        "condition": "query.block_state('minecraft:cardinal_direction') == 'south'",
+        "components": { "minecraft:transformation": { "rotation": [0, 0, 0] } }
+      },
+      {
+        "condition": "query.block_state('minecraft:cardinal_direction') == 'west'",
+        "components": { "minecraft:transformation": { "rotation": [0, 270, 0] } }
+      },
+      {
+        "condition": "query.block_state('minecraft:cardinal_direction') == 'east'",
+        "components": { "minecraft:transformation": { "rotation": [0, 90, 0] } }
+      }
+    ],
+    "components": {
+      "minecraft:geometry": "geometry.stuffed_squid_stage0",
+      "minecraft:redstone_conductivity": { "allows_wire_to_step_down": false },
+      "farmersdelight:dish": {
+        "has_leftovers": true,
+        "servings": 5,
+        "contents": "minersdelight:bowl_of_stuffed_squid",
+        "utensil": "minecraft:bowl"
+      },
+      "minecraft:loot": "loot_tables/minersdelight/dish/stuffed_squid.json",
+      "minecraft:destructible_by_mining": { "seconds_to_destroy": 1.0 },
+      "minecraft:light_dampening": 0,
+      "minecraft:destructible_by_explosion": { "explosion_resistance": 0.25 },
+      "minecraft:connection_rule": { "accepts_connections_from": "none" },
+      "minecraft:material_instances": {
+        "*": { "texture": "stuffed_squid_front", "render_method": "alpha_test" },
+        "stuffed_squid_front": { "texture": "stuffed_squid_front", "render_method": "alpha_test" },
+        "stuffed_squid_back": { "texture": "stuffed_squid_back", "render_method": "alpha_test" },
+        "stuffed_squid_side": { "texture": "stuffed_squid_side", "render_method": "alpha_test" },
+        "stuffed_squid_top": { "texture": "stuffed_squid_top", "render_method": "alpha_test" },
+        "stuffed_squid_bottom": { "texture": "stuffed_squid_bottom", "render_method": "alpha_test" },
+        "stuffed_squid_rice": { "texture": "stuffed_squid_rice", "render_method": "alpha_test" },
+        "stuffed_squid_tantacles": { "texture": "stuffed_squid_tentacles", "render_method": "alpha_test" },
+        "tray_stuffed_squid": { "texture": "tray_stuffed_squid", "render_method": "alpha_test" },
+        "tray_bottom": { "texture": "tray_bottom", "render_method": "alpha_test" }
+      },
+      "minecraft:collision_box": {
+        "origin": [-7.0, 0.0, -7.0],
+        "size": [14.0, 18.0, 14.0]
+      },
+      "minecraft:selection_box": {
+        "origin": [-7.0, 0.0, -7.0],
+        "size": [14.0, 18.0, 14.0]
+      },
+      "tag:farmersdelight:blockfood": {}
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:item": {
+    "description": {
+      "identifier": "minersdelight:moss",
+      "menu_category": {
+        "category": "nature",
+        "group": "minersdelight:itemGroup.name.otherfood"
+      }
+    },
+    "components": {
+      "minecraft:food": {
+        "can_always_eat": false,
+        "nutrition": 1,
+        "saturation_modifier": 0.05
+      },
+      "minecraft:use_animation": "eat",
+      "minecraft:use_modifiers": {
+        "use_duration": 0.8
+      },
+      "minecraft:icon": {
+        "textures": {
+          "default": "minersdelight:moss"
+        }
+      },
+      "minecraft:tags": {
+        "tags": [
+          "minersdelight:moss"
+        ]
+      },
+      "minersdelight:consume_effects": {
+        "params": [
+          {
+            "effect": "farmersdelight:comfort",
+            "duration": 200,
+            "amplifier": 0,
+            "chance": 1.0
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,214 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:block": {
+    "description": {
+      "identifier": "minersdelight:cave_carrots",
+      "menu_category": {
+        "category": "none"
+      },
+      "states": {
+        "farmersdelight:growth": [0, 1, 2, 3, 4, 5, 6, 7]
+      }
+    },
+    "permutations": [
+      {
+        "condition": "query.block_state('farmersdelight:growth') == 0",
+        "components": {
+          "minecraft:geometry": "geometry.bush_crop",
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "cave_carrots_0",
+              "ambient_occlusion": false,
+              "face_dimming": false,
+              "render_method": "alpha_test"
+            }
+          },
+          "minecraft:selection_box": {
+            "origin": [-8, 0, -8],
+            "size": [16, 2, 16]
+          }
+        }
+      },
+      {
+        "condition": "query.block_state('farmersdelight:growth') == 1",
+        "components": {
+          "minecraft:geometry": "geometry.bush_crop",
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "cave_carrots_0",
+              "ambient_occlusion": false,
+              "face_dimming": false,
+              "render_method": "alpha_test"
+            }
+          },
+          "minecraft:selection_box": {
+            "origin": [-8, 0, -8],
+            "size": [16, 4, 16]
+          }
+        }
+      },
+      {
+        "condition": "query.block_state('farmersdelight:growth') == 2",
+        "components": {
+          "minecraft:geometry": "geometry.bush_crop",
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "cave_carrots_1",
+              "ambient_occlusion": false,
+              "face_dimming": false,
+              "render_method": "alpha_test"
+            }
+          },
+          "minecraft:selection_box": {
+            "origin": [-8, 0, -8],
+            "size": [16, 4, 16]
+          }
+        }
+      },
+      {
+        "condition": "query.block_state('farmersdelight:growth') == 3",
+        "components": {
+          "minecraft:geometry": "geometry.bush_crop",
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "cave_carrots_1",
+              "ambient_occlusion": false,
+              "face_dimming": false,
+              "render_method": "alpha_test"
+            }
+          },
+          "minecraft:selection_box": {
+            "origin": [-8, 0, -8],
+            "size": [16, 6, 16]
+          }
+        }
+      },
+      {
+        "condition": "query.block_state('farmersdelight:growth') == 4",
+        "components": {
+          "minecraft:geometry": "geometry.bush_crop",
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "cave_carrots_2",
+              "ambient_occlusion": false,
+              "face_dimming": false,
+              "render_method": "alpha_test"
+            }
+          },
+          "minecraft:selection_box": {
+            "origin": [-8, 0, -8],
+            "size": [16, 6, 16]
+          }
+        }
+      },
+      {
+        "condition": "query.block_state('farmersdelight:growth') == 5",
+        "components": {
+          "minecraft:geometry": "geometry.bush_crop",
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "cave_carrots_2",
+              "ambient_occlusion": false,
+              "face_dimming": false,
+              "render_method": "alpha_test"
+            }
+          },
+          "minecraft:selection_box": {
+            "origin": [-8, 0, -8],
+            "size": [16, 8, 16]
+          }
+        }
+      },
+      {
+        "condition": "query.block_state('farmersdelight:growth') == 6",
+        "components": {
+          "minecraft:geometry": "geometry.bush_crop",
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "cave_carrots_3",
+              "ambient_occlusion": false,
+              "face_dimming": false,
+              "render_method": "alpha_test"
+            }
+          },
+          "minecraft:selection_box": {
+            "origin": [-8, 0, -8],
+            "size": [16, 8, 16]
+          }
+        }
+      },
+      {
+        "condition": "query.block_state('farmersdelight:growth') == 7",
+        "components": {
+          "minecraft:geometry": "geometry.bush_crop",
+          "minecraft:loot": "loot_tables/minersdelight/crops/cave_carrot_riped.json",
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "cave_carrots_3",
+              "ambient_occlusion": false,
+              "face_dimming": false,
+              "render_method": "alpha_test"
+            }
+          },
+          "minecraft:selection_box": {
+            "origin": [-8, 0, -8],
+            "size": [16, 12.9, 16]
+          }
+        }
+      }
+    ],
+    "components": {
+      "minecraft:geometry": "geometry.bush_crop",
+      "minecraft:connection_rule": {
+        "accepts_connections_from": "none"
+      },
+      "minecraft:redstone_conductivity": {
+        "allows_wire_to_step_down": false
+      },
+      "minecraft:liquid_detection": {
+        "detection_rules": [
+          {
+            "liquid_blocks": ["minecraft:water", "minecraft:flowing_water"],
+            "on_liquid_touches": "broken"
+          }
+        ]
+      },
+      "farmersdelight:crop": {
+        "loot": "loot_tables/minersdelight/crops/cave_carrot_riped.json",
+        "state": {
+          "name": "farmersdelight:growth",
+          "age": 7
+        }
+      },
+      "minecraft:destructible_by_mining": {
+        "seconds_to_destroy": 0
+      },
+      "minecraft:light_dampening": 0,
+      "minecraft:destructible_by_explosion": {
+        "explosion_resistance": 0
+      },
+      "minecraft:placement_filter": {
+        "conditions": [
+          {
+            "block_filter": ["farmersdelight:rich_soil_farmland"],
+            "allowed_faces": ["up"]
+          }
+        ]
+      },
+      "minecraft:material_instances": {
+        "*": {
+          "texture": "cave_carrots_0",
+          "ambient_occlusion": false,
+          "face_dimming": false,
+          "render_method": "alpha_test"
+        }
+      },
+      "minecraft:collision_box": false,
+      "minecraft:movable": false,
+      "minecraft:precipitation_interactions": {
+        "default": "none"
+      },
+      "tag:crop": {}
+    }
+  }
+}

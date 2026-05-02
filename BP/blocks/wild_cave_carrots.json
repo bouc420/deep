@@ -1,0 +1,54 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:block": {
+    "description": {
+      "identifier": "minersdelight:wild_cave_carrots",
+      "menu_category": {
+        "category": "nature"
+      }
+    },
+    "components": {
+      "minecraft:destructible_by_mining": {
+        "seconds_to_destroy": 0.2
+      },
+      "minecraft:destructible_by_explosion": {
+        "explosion_resistance": 0.2
+      },
+      "minecraft:geometry": "geometry.bush_crop",
+      "minecraft:material_instances": {
+        "*": {
+          "texture": "minersdelight:wild_cave_carrots",
+          "render_method": "alpha_test"
+        }
+      },
+      "minecraft:placement_filter": {
+        "conditions": [
+          {
+            "block_filter": [
+              "minecraft:dirt",
+              "minecraft:grass_block",
+              "minecraft:podzol",
+              "minecraft:coarse_dirt",
+              "minecraft:rooted_dirt"
+            ],
+            "allowed_faces": ["up"]
+          }
+        ]
+      },
+      "minecraft:light_dampening": 0,
+      "minecraft:flammable": false,
+      "minecraft:on_player_destroyed": {
+        "event": "minersdelight:harvest_wild_carrot"
+      }
+    },
+    "events": {
+      "minersdelight:harvest_wild_carrot": {
+        "run_command": {
+          "command": [
+            "loot spawn ~ ~ ~ loot loot_tables/minersdelight/blocks/wild_cave_carrots.json"
+          ]
+        }
+      }
+    }
+  }
+}

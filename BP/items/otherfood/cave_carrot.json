@@ -1,0 +1,39 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:item": {
+    "description": {
+      "identifier": "minersdelight:cave_carrot",
+      "menu_category": {
+        "category": "nature",
+        "group": "itemGroup.name.crop"
+      }
+    },
+    "components": {
+      "minecraft:icon": {
+        "textures": {
+          "default": "minersdelight:cave_carrot"
+        }
+      },
+      "minecraft:max_stack_size": 64,
+      "minecraft:food": {
+        "nutrition": 2,
+        "saturation_modifier": 0.4,
+        "can_always_eat": false,
+        "using_converts_to": "minecraft:air"
+      },
+      "minecraft:use_animation": "eat",
+      "minecraft:use_modifiers": {
+        "use_duration": 1.6,
+        "movement_modifier": 0.4
+      },
+      "minecraft:compostable": {
+        "composting_chance": 0.65
+      },
+      "minecraft:tags": {
+        "tags": [
+          "farmersdelight:cabbage_roll_ingredients"
+        ]
+      }
+    }
+  }
+}

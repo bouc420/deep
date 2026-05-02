@@ -1,0 +1,40 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:item": {
+    "description": {
+      "identifier": "minersdelight:beetroot_soup_cup",
+      "menu_category": {
+        "category": "nature",
+        "group": "minersdelight:itemGroup.name.cup"
+      }
+    },
+    "components": {
+      "minecraft:food": {
+        "can_always_eat": false,
+        "nutrition": 3,
+        "saturation_modifier": 0.3,
+        "using_converts_to": "minersdelight:copper_cup"
+      },
+      "minecraft:use_animation": "eat",
+      "minecraft:use_modifiers": {
+        "use_duration": 0.8
+      },
+      "minecraft:max_stack_size": 16,
+      "minecraft:icon": {
+        "textures": {
+          "default": "minersdelight:beetroot_soup_cup"
+        }
+      },
+      "minersdelight:consume_effects": {
+        "params": [
+          {
+            "effect": "farmersdelight:comfort",
+            "duration": 1800,
+            "amplifier": 0,
+            "chance": 1.0
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:item": {
+    "description": {
+      "identifier": "minersdelight:glow_squid",
+      "menu_category": {
+        "category": "nature",
+        "group": "minersdelight:itemGroup.name.meat"
+      }
+    },
+    "components": {
+      "minecraft:food": {
+        "can_always_eat": false,
+        "nutrition": 3,
+        "saturation_modifier": 0.15
+      },
+      "minecraft:use_animation": "eat",
+      "minecraft:use_modifiers": {
+        "use_duration": 1.6,
+        "movement_modifier": 0.4
+      },
+      "minecraft:icon": {
+        "textures": {
+          "default": "minersdelight:glow_squid"
+        }
+      },
+      "minecraft:tags": {
+        "tags": [
+          "minecraft:is_fish",
+          "minersdelight:squid",
+          "minersdelight:raw_squid",
+          "minersdelight:glow_squid",
+          "farmersdelight:cabbage_roll_ingredients"
+        ]
+      },
+      "minersdelight:consume_effects": {
+        "params": [
+          {
+            "effect": "minecraft:glowing",
+            "duration": 600,
+            "amplifier": 0,
+            "chance": 1.0
+          }
+        ]
+      }
+    }
+  }
+}

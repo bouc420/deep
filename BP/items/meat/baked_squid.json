@@ -1,0 +1,36 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:item": {
+    "description": {
+      "identifier": "minersdelight:baked_squid",
+      "menu_category": {
+        "category": "nature",
+        "group": "minersdelight:itemGroup.name.meat"
+      }
+    },
+    "components": {
+      "minecraft:food": {
+        "can_always_eat": false,
+        "nutrition": 6,
+        "saturation_modifier": 0.4
+      },
+      "minecraft:use_animation": "eat",
+      "minecraft:use_modifiers": {
+        "use_duration": 1.6,
+        "movement_modifier": 0.4
+      },
+      "minecraft:icon": {
+        "textures": {
+          "default": "minersdelight:baked_squid"
+        }
+      },
+      "minecraft:tags": {
+        "tags": [
+          "minecraft:is_fish",
+          "minersdelight:squid",
+          "minersdelight:cooked_squid"
+        ]
+      }
+    }
+  }
+}

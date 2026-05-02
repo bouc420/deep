@@ -1,0 +1,20 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:item": {
+    "description": {
+      "identifier": "minersdelight:copper_cup",
+      "menu_category": {
+        "category": "equipment",
+        "group": "minersdelight:itemGroup.name.cup"
+      }
+    },
+    "components": {
+      "minecraft:max_stack_size": 16,
+      "minecraft:icon": {
+        "textures": {
+          "default": "minersdelight:copper_cup"
+        }
+      }
+    }
+  }
+}

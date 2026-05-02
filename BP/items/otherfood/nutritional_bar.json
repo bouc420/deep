@@ -1,0 +1,39 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:item": {
+    "description": {
+      "identifier": "minersdelight:nutritional_bar",
+      "menu_category": {
+        "category": "nature",
+        "group": "minersdelight:itemGroup.name.otherfood"
+      }
+    },
+    "components": {
+      "minecraft:food": {
+        "can_always_eat": false,
+        "nutrition": 10,
+        "saturation_modifier": 0.55
+      },
+      "minecraft:use_animation": "eat",
+      "minecraft:use_modifiers": {
+        "use_duration": 1.6,
+        "movement_modifier": 0.4
+      },
+      "minecraft:icon": {
+        "textures": {
+          "default": "minersdelight:nutritional_bar"
+        }
+      },
+      "minersdelight:consume_effects": {
+        "params": [
+          {
+            "effect": "farmersdelight:nourishment",
+            "duration": 600,
+            "amplifier": 0,
+            "chance": 1.0
+          }
+        ]
+      }
+    }
+  }
+}

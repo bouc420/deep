@@ -1,0 +1,30 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:item": {
+    "description": {
+      "identifier": "minersdelight:insect_stew_cup",
+      "menu_category": {
+        "category": "nature",
+        "group": "minersdelight:itemGroup.name.cup"
+      }
+    },
+    "components": {
+      "minecraft:food": {
+        "can_always_eat": false,
+        "nutrition": 4,
+        "saturation_modifier": 0.225,
+        "using_converts_to": "minersdelight:copper_cup"
+      },
+      "minecraft:use_animation": "eat",
+      "minecraft:use_modifiers": {
+        "use_duration": 0.8
+      },
+      "minecraft:max_stack_size": 16,
+      "minecraft:icon": {
+        "textures": {
+          "default": "minersdelight:insect_stew_cup"
+        }
+      }
+    }
+  }
+}
