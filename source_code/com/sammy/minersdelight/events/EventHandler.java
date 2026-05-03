@@ -1,24 +1,3 @@
-/*
- * Decompiled with CFR 0.152.
- * 
- * Could not load the following classes:
- *  net.neoforged.bus.api.SubscribeEvent
- *  net.neoforged.fml.common.EventBusSubscriber
- *  net.neoforged.fml.common.EventBusSubscriber$Bus
- *  net.neoforged.neoforge.event.brewing.RegisterBrewingRecipesEvent
- */
-package com.sammy.minersdelight.events;
-
-import com.sammy.minersdelight.setup.MDPotions;
-import net.neoforged.bus.api.SubscribeEvent;
-import net.neoforged.fml.common.EventBusSubscriber;
-import net.neoforged.neoforge.event.brewing.RegisterBrewingRecipesEvent;
-
-@EventBusSubscriber(bus=EventBusSubscriber.Bus.GAME)
-public class EventHandler {
-    @SubscribeEvent
-    public static void registerPotionBrewing(RegisterBrewingRecipesEvent event) {
-        MDPotions.registerPotionBrewing(event);
-    }
-}
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:54c04ff205b7d2fe1d48007b03caa13b87bd46b4252a3fa4354f6fb34cba1291
+size 792
